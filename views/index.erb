@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Micro Chat Based on Sinatra and YAML</title>
+
+	<script src="prototype.js" type="text/javascript" charset="utf-8"></script>
+	<script src="application.js" type="text/javascript" charset="utf-8"></script>
+	
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	
+</head>
+
+<body>
+
+<h2>Micro Chat Based on Sinatra and YAML</h2>
+    
+<div id="campfire_chat">
+  <div id="chat">
+    <p id="chat_message"><em>Welcome to the chat...</em></p>
+    <%# Lets display all messages we have.... %>
+    <% @messages.each do |m| %>
+    <p id="<%= m[:created_at] %>"><strong><%= m[:author] %></strong> <em>says</em> <span><%= m[:message] %></span></p>
+    <% end %>
+  </div>
+</div>
+
+<form id="speaker" action="/speak" method="post" accept-charset="utf-8">  
+  <p>
+    <input type="text" id="author" name="author" value="<%= @remote_ip %>" />
+    <label>wants to say</label>
+    <input type="text" id="message" name="message" value="" />
+    <input type="submit" value="!" />
+  </p>
+</form>
+
+<script type="text/javascript">try { Application.initialize(); } catch(e) { alert(e) }</script>
+
+</body>
+</html>

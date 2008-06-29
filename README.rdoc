@@ -1,0 +1,38 @@
+= YAML-based micro chat with Sinatra
+
+=== About
+
+This mini-application demonstrates unbeliavable elegance and power of the Ruby language, 
+the Sinatra micro-framework and the Protoype JavaScript library.
+
+It consists of six files for every essential aspect of the application:
+
+* The <tt>chat.rb</tt> file, which holds the application logic (loading and saving the messages)
+* The <tt>index.html</tt> file, which defines the GUI of the application
+* The <tt>screen.css</tt> which defines the visual style of the application
+* The <tt>aplication.js</tt> (and <tt>prototype.js</tt>) files which enable rich interactivity 
+  (continuous updating and instant posting)
+* The messages.yml file which holds the data in YAML format
+
+The layers are thus properly separated even in this micro-application. 
+It degrades finely for browsers without JavaScript enabled.
+
+=== Installation
+
+Unpack the application, rename messages.example to messages.yml and run 
+
+  ruby chat.rb 
+  
+in the application directory in the console. You will see something like:
+
+  == Sinatra has taken the stage on port 4567!
+
+=== Resources
+
+* Sinatra micro-framework: http://sinatra.rubyforge.org
+* Prototype JavaScript library: http://www.prototypejs.org/
+* Unobtrusive JavaScript: http://en.wikipedia.org/wiki/Unobtrusive_JavaScript
+
+=== Credits
+
+The application was created by Karel Minarik (www.karmi.cz)
