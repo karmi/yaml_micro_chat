@@ -19,7 +19,7 @@ It degrades finely for browsers without JavaScript enabled.
 
 === Installation
 
-Unpack the application, rename messages.example to messages.yml and run 
+Unpack the application, <b>rename <tt>messages.example</tt> to <tt>messages.yml</tt></b> and run 
 
   ruby chat.rb 
   
