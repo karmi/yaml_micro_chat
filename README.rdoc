@@ -2,7 +2,7 @@
 
 === About
 
-This mini-application demonstrates unbeliavable elegance and power of the Ruby language, 
+This mini-application demonstrates the elegance and power of the Ruby language, 
 the Sinatra micro-framework and the Protoype JavaScript library.
 
 It consists of six files for every essential aspect of the application:
