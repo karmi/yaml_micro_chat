@@ -12,10 +12,12 @@ It consists of six files for every essential aspect of the application:
 * The <tt>screen.css</tt> which defines the visual style of the application
 * The <tt>aplication.js</tt> (and <tt>prototype.js</tt>) files which enable rich interactivity 
   (continuous updating and instant posting)
-* The messages.yml file which holds the data in YAML format
+* The <tt>messages.yml</tt> file which holds the data in YAML format (rename the messages.example file)
 
 The layers are thus properly separated even in this micro-application. 
 It degrades finely for browsers without JavaScript enabled.
+
+It even features simplistic Unit tests for the application (see <tt>test</tt> directory)
 
 === Installation
 
@@ -26,6 +28,10 @@ Unpack the application, <b>rename <tt>messages.example</tt> to <tt>messages.yml<
 in the application directory in the console. You will see something like:
 
   == Sinatra has taken the stage on port 4567!
+  
+Then point your browser to:
+
+  http://localhost:4567
 
 === Resources
 
@@ -35,4 +41,4 @@ in the application directory in the console. You will see something like:
 
 === Credits
 
-The application was created by Karel Minarik (www.karmi.cz)
+The application was created by Karel Minařík (www.karmi.cz)
