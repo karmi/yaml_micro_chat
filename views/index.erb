@@ -22,7 +22,7 @@
     <p id="chat_message"><em>Welcome to the chat...</em></p>
     <%# Lets display all messages we have.... %>
     <% @messages.each do |m| %>
-    <p id="<%= m[:created_at] %>"><strong><%= m[:author] %></strong> <em>says</em> <span><%= m[:message] %></span></p>
+    <p id="<%= m[:created_at] %>"><strong><%= m[:author] %></strong> <em>says</em> <span><%= m[:message] %></span><span class='d'> @ <%= human_date(m[:created_at]) %></span></p>
     <% end %>
   </div>
 </div>

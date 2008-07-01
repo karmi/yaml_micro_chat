@@ -61,6 +61,18 @@ end#Chat
 
 # -----------------------------------------------------------------------------
 
+# == Helpers
+
+helpers do
+  
+  def human_date(t)
+    Time.at(t).strftime('%m/%d').gsub(/0(\d)/, '\1') +
+    '&nbsp;' + 
+    Time.at(t).strftime('%H:%m')
+  end
+  
+end
+
 
 # == 'Routing' & 'Controllers' of the application
 
@@ -76,7 +88,7 @@ end
 get '/listen' do
   out = ""
   Chat.listen(params[:from]).each do |m| 
-    out << "<p id=\"#{m[:created_at]}\"><strong>#{m[:author]}</strong> <em>says</em> <span>#{m[:message]}</span></p>"
+    out << "<p id=\"#{m[:created_at]}\"><strong>#{m[:author]}</strong> <em>says</em> <span>#{m[:message]}</span><span class='d'> @ #{human_date(m[:created_at])}</span></p>"
   end
   out
 end

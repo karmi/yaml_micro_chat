@@ -6,6 +6,7 @@ h2 { text-transform: uppercase; }
 #chat p strong { color: #999; }
 #chat p em { color: #ccc; }
 #chat p span { font-size: 140%; }
+#chat p span.d { color: #ccc; font-size: 75%; }
 
 .info { font-size: 85%; color: #999; }
 
