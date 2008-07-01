@@ -68,7 +68,7 @@ helpers do
   def human_date(t)
     Time.at(t).strftime('%m/%d').gsub(/0(\d)/, '\1') +
     '&nbsp;' + 
-    Time.at(t).strftime('%H:%m')
+    Time.at(t).strftime('%H:%M')
   end
   
 end
