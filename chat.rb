@@ -28,14 +28,14 @@ class Chat
   # Load the messages from file and send the new ones in response
   def self.listen(from=0)
     start unless @@messages
-    puts "* | Load messages from time: #{Time.at(from.to_i)}"
-    puts "  | #{@@messages.inspect}"
+    # puts "* | Load messages from time: #{Time.at(from.to_i)}"
+    # puts "  | #{@@messages.inspect}"
     @@messages.clone.delete_if { |m| m[:created_at].to_i <= from.to_i if m[:created_at] } # Kick out old messages
   end
 
   # Write the message to file
   def self.speak(author='', message='Testing the chat...')
-    puts ">>> #{author} wants to say #{message}"
+    # puts ">>> #{author} wants to say #{message}"
     tmpfile = File.join( File.dirname(__FILE__), 'messages.tmp' )
     File.open(tmpfile, 'w') do |f| 
       f << ( @@messages << { :author => author, :message => message, :created_at => Time.now.to_i } ).to_yaml 
@@ -52,7 +52,7 @@ class Chat
   
   # Load messages from YAML
   def self.load_messages
-    puts "Reading messages from YAML file"
+    # puts "Reading messages from YAML file"
     @@messages = YAML.load_file( @@yaml_file )
   end
   
